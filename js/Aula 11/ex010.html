@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sistema de Multas</h1>
+    <div id="menu">
+      <p>Digite sua velocidade:</p>
+      <label for="velocidade">
+        <input type="number" name="velocidade" id="velocidade" />Km/h</label
+      >
+      <br>
+      <input
+        type="button"
+        value="Verificar"
+        id="verificador"
+        onclick="analisar()"
+      />
+      <div id="resposta"></div>
+    </div>
+    <script>
+      function analisar() {
+        var vel = Number(document.getElementById("velocidade").value);
+        var resp = document.getElementById("resposta");
+        if (vel > 60) {
+          resp.innerHTML = `MULTADO! A velocidade máxima permitida
+     é de 60Km/h, você estava a ${vel}Km/h <br>`;
+        } else {
+          resp.innerHTML = `Você está dentro da velocidade permitida. <br>`;
+        }
+
+        resp.innerHTML += "Prossiga com segurança!";
+      }
+    </script>
+  </body>
+</html>

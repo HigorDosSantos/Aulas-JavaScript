@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex06.css">
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseout="sai()">
+        Interaja...
+        
+    </div>
+
+    <script>
+
+function clicar() {
+    var area1 = document.getElementById("area");
+    area1.style.backgroundColor = "red";
+    area1.style.color= 'black';
+    area1.innerHTML = "Clicou!";
+}
+ function sai(){
+    var area1 = document.querySelector('#area')
+     area1.style.backgroundColor = "rgb(14, 33, 54)";
+    area1.style.color= 'white';
+    area1.innerHTML = "Clique novamente";
+
+ }
+
+    </script>
+</body>
+</html>

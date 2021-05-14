@@ -1,0 +1,476 @@
+ 	
+			Soma de Valores
+
+ <body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1" />
+    <p>+</p>
+    <input type="number" name="txtn2" id="txtn2" />
+    <input type="button" value="Somar" onclick="somar()" />
+    <p id="resultado">Resultado</p>
+    <script>
+      function somar() {
+        var n1 = Number(document.getElementById("txtn1").value);
+        var n2 = Number(document.getElementById("txtn2").value);
+
+        var s = n1 + n2;
+        resultado.innerText = `A soma desses números é ${s}`;
+      }
+    </script>
+  </body>
+
+
+
+
+			Sistema de Multas
+
+  <body>
+    <h1>Sistema de Multas</h1>
+    <div id="menu">
+      <p>Digite sua velocidade:</p>
+      <label for="velocidade">
+        <input type="number" name="velocidade" id="velocidade" />Km/h</label
+      >
+      <br>
+      <input
+        type="button"
+        value="Verificar"
+        id="verificador"
+        onclick="analisar()"
+      />
+      <div id="resposta"></div>
+    </div>
+    <script>
+      function analisar() {
+        var vel = Number(document.getElementById("velocidade").value);
+        var resp = document.getElementById("resposta");
+        if (vel > 60) {
+          resp.innerHTML = `MULTADO! A velocidade máxima permitida
+     é de 60Km/h, você estava a ${vel}Km/h <br>`;
+        } else {
+          resp.innerHTML = `Você está dentro da velocidade permitida. <br>`;
+        }
+
+        resp.innerHTML += "Prossiga com segurança!";
+      }
+    </script>
+  </body>
+
+
+
+
+
+			Nacionalidade
+
+ <body>
+    <h1>Você é Brasileiro?</h1>
+    <div id="menu">
+      <p>Digite o país no qual você nasceu:</p>
+      <input type="text" name="país" id="país" />
+      <input
+        type="button"
+        value="Verificar"
+        id="verificar"
+        onclick="verificar()"
+      />
+      <div id="resposta"></div>
+    </div>
+    <script>
+      function verificar() {
+        var nasc = String(document.getElementById("país").value)
+        var resp = document.getElementById("resposta");
+        if (nasc == "Brasil") {
+          resp.innerHTML += "Você é BRASILEIRO!";
+        } else {
+          resp.innerHTML += "Você é estrangeiro!";
+        } 
+      }
+    </script>
+  </body>
+
+
+
+
+
+			Hora do dia
+
+ <body id="body1" onload="carregar()">
+    <h1>Hora do dia</h1>
+    <div class="main">
+      <p id="atual">Horario:</p>
+      <img src="" alt="" id="imagem" />
+    </div>
+    <footer><p>&copy;CursoemVideo</p></footer>
+
+    <script src="exx1.js"></script>
+    <script>
+      function carregar() {
+        var agora = new Date();
+        var hora = agora.getHours();
+        var minuto = agora.getMinutes();
+        var body = document.getElementById("body1");
+        var img = document.getElementById("imagem");
+        atual.innerHTML = `Agora são ${hora}:${minuto} horas`;
+
+        if (hora < 12) {
+          //foto manhã
+          img.src = "foto-dia.png";
+          body.style.backgroundColor = "rgb(100, 149, 237)";
+        } else if (hora >= 12 && hora <= 18) {
+          //foto tarde
+          img.src = "foto-tarde.png";
+          body.style.backgroundColor = "rgb(241, 181, 91)";
+        } else {
+          //foto noite
+          img.src = "foto-noite.png";
+          body.style.backgroundColor = "rgb(28, 49, 49)";
+        }
+      }
+    </script>
+  </body>
+
+
+
+
+
+
+	       	Verificador de Idade
+
+  <body>
+    <h1>Verificador de Idade</h1>
+    <div class="container">
+      <label for="nascimento">Ano de Nascimento: </label>
+      <input type="number" name="nascimento" id="nascimento" min="0" max="2021"/>
+      <br />
+      <br />
+      Sexo:
+      <label for="Mas"><input type="radio" name="radsex" id="Mas" checked/> Masculino</label>
+      <label for="Fem"><input type="radio" name="radsex" id="Fem" /> Feminino</label>
+      <br />
+      <br />
+      <input
+        id="verificar"
+        type="button"
+        value="Verificar"
+        onclick="clicar()"
+      />
+      <div id="resposta"></div>
+      <img src="" alt="" id="imagem">
+    </div>
+    <footer>
+      <p>&copy;CursoemVideo</p>
+    </footer>
+    <script src="exx2.js">
+function clicar() {
+    var data = new Date()
+    var ano = data.getFullYear()
+    var fano = document.getElementById('nascimento')
+    var res = document.getElementById("resposta")
+    var img = document.getElementById("imagem")
+    if (fano.value.length == 0 || fano.value > ano) {
+        res.innerHTML = "[ERRO] Verifique os dados e tente novamente"
+    } else {
+        var fsex = document.getElementsByName('radsex')
+        var idade = ano - Number(fano.value)
+        var genero = ''
+        if (fsex[0].checked) {
+            genero = 'Homem'
+        } else if (fsex[1].checked) {
+            genero = 'Mulher'
+        }
+        if (idade < 15 && genero == 'Homem') {
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos `
+            img.src = "foto-M0a15.png"
+        }
+        else if (idade < 15 && genero == 'Mulher') {
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos `
+            img.src = "foto-F0a15.png"
+        }
+        if (idade >= 15 && idade <= 50 && genero == 'Homem') {
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos `
+            img.src = "foto-M15a50.png"
+        }
+        else if (idade >= 15 && idade <= 50 && genero == 'Mulher') {
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos `
+            img.src = "foto-F15a50.png"
+        }
+        if (idade > 50 && genero == 'Homem') {
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos `
+            img.src = "foto-M50+.png"
+        }
+        else if (idade > 50 && genero == 'Mulher') {
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos `
+            img.src = "foto-F50+.png"
+        }
+    }
+
+}
+    </script>
+  </body>
+
+
+
+
+
+	Repetição com teste logico no inicio
+
+var c = 1
+while (c <= 100){
+    console.log(c)
+    c += 1
+console.log('Tudo bem?')
+}
+console.log('Fim')
+
+
+
+    ???	Repetição com teste logico no final ???
+
+var c = 1
+do {
+    console.log(`passo ${c}`);
+    c += 1
+} while (c <= 6)
+console.log('Fim')
+
+
+
+
+for (var c=1;c<=10;c+=1){
+    console.log(`passo ${c}`)
+}
+
+
+
+
+
+				 Contador
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="3style.css">
+    <title>Vamos Contar</title>
+  </head>
+  <body>
+    <h1>Vamos contar</h1>
+    <div class="container">
+      <label for="inicio"
+        >Início: <strong>/</strong><input type="number" name="inicio" id="inicio"
+      /></label>
+      <br />
+      <label for="fim">Fim: <strong>....</strong><input type="number" name="fim" id="fim" /></label>
+      <br />
+      <label for="passo"
+        >Passo: <input type="number" name="passo" id="passo"
+      /></label>
+      <br />
+      <input type="button" id="contar" value="Contar" onclick="contar()" />
+      <div id="resposta"></div>
+      <input type="reset" value="Limpar" onclick="limpar()">
+    </div>
+    <footer>
+      <p>&copy;CursoemVideo</p>
+    </footer>
+    <script src="exx3.js">
+function contar() {
+    var i = Number(document.getElementById('inicio').value)
+    var f = Number(document.getElementById('fim').value)
+    var p = Number(document.getElementById('passo').value)
+    var res = document.getElementById("resposta")
+
+
+    if (i.length == 0 || i == 0 || f.length == 0) {
+        alert("[ERRO] dados inválidos, reinicie a pagina")
+    }
+
+    else if (p.length == 0 || p == 0) {
+        alert("Passo inválido, será considerado passo 1")
+        p = 1
+        while (i <= f) {
+            res.innerHTML += `${i} 👉`
+            i += p
+        }
+        res.innerHTML += '🏁<br>'
+    }
+    else if (p.length != 0 || p != 0){
+        while (i <= f) {
+            res.innerHTML += `${i} 👉`
+            i += p
+
+        }
+        res.innerHTML += '🏁<br>'
+    }
+    else if(i > f){
+
+        while (i > f){
+            res.innerHTML += `${i} 👉`
+            i = -p 
+        }
+        res.innerHTML += '🏁<br>'
+    }
+
+
+}
+
+function limpar() {
+    var res = document.getElementById("resposta")
+    res.innerHTML = ''
+}</script>
+  </body>
+</html>
+
+
+
+
+
+				Calculadora
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="4style.css" />
+    <title>Tabuada</title>
+  </head>
+  <body>
+    <h1>Tabuada</h1>
+    <div class="container">
+      <label for=""
+        >Número: <input type="number" name="numero" id="numero"
+      /></label>
+      <input type="button" value="Gerar tabuada" onclick="gerar()" />
+      <div id="resposta"></div>
+      <input type="button" value="" id="limpar" onclick="limpar()" />
+    </div>
+    <footer><p>&copy;CursoemVideo</p></footer>
+    <script src="exx4.js">
+function gerar() {
+    var n = Number(document.getElementById("numero").value);
+    var res = document.getElementById("resposta")
+
+    //  res.innerHTML=`${n}`
+    if (n == 0) {
+        alert("Por favor digite um número")
+    }
+    else {
+        var m = 1
+        while (m <= 10) {
+            var mult = n * m
+            res.innerHTML += `${n} x ${m} = ${mult}<br>`
+            m += 1
+        }
+        res.innerHTML += '-------------------------<br>'
+    }
+}
+function limpar() {
+    var res = document.getElementById("resposta")
+    res.innerHTML = ''
+}</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+		Variaveis compostas
+
+
+ var num = [5, 8, 2, 9, 3]
+console.log(`${num}`)
+console.log(`O vetor tem ${num.length} posições`)
+console.log(`O primeiro vetor é ${num[0]}`)
+console.log(`Em ordem crescente fica: ${num.sort()}`)
+console.log(`O primeiro vetor é ${num[0]}`)
+num.push(1)
+console.log(`${num}`)
+console.log(`Em ordem crescente fica: ${num.sort()}`)
+console.log(`O primeiro vetor é ${num[0]}`) 
+var pos = num.indexOf(3)
+if (pos == -1) {
+ console.log("O valor não foi encontrado") 
+}else {
+ console.log(`O valor 3 está na posição ${pos}`) 
+}
+
+
+
+
+
+
+
+var num = [4, 5, 6, 7, 8]
+posição = 0
+while (posição < num.length) {
+    console.log(num[posição])
+    posição += 1
+}
+
+
+
+
+
+var num = [4, 5, 6, 7, 8]
+for(var posição in num )
+{
+    console.log(`A posição ${posição} tem o valor ${num[posição]}`)
+}
+
+
+
+
+	par ou impar
+
+function parimp(n){
+    if (n%2==0){
+        return 'par'
+    }
+    else{
+        return "impar"
+    }
+}
+var res = parimp(10)
+console.log(res)
+
+
+
+ 		soma
+
+function soma(n1=0, n2=0){
+return n1+n2
+}
+console.log(soma(16,8))
+
+
+
+	
+	fatorial
+
+function fatorial(n){
+    let fat = 1
+    for(let c = n; c > 1; c--){
+        fat *= c
+    }    return fat}
+console.log(fatorial(5))
+
+
+
+	fatorial 2
+
+function fatorial(n) {
+    if (n == 1) {
+        return 1
+
+    } else {
+        return n * fatorial(n-1) 
+    }
+}
+console.log(fatorial(5))

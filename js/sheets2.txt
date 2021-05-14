@@ -1,0 +1,258 @@
+Tipos de dados e variaveis
+
+alert()
+confirm()
+prompt()
+
+var = variavel
+
+
+
+
+-=- para abrir JS em outra aba -=- 
+     <script src=""></script>
+
+
+
+
+Comentários
+
+// uma linha
+/*  */ varias linhas
+
+
+
+Identificadores
+
+Podem começar com letra, $ ou _
+Não podem começaar com números
+É possivel usar letras ou números
+É possivel usar acentos e símbolos
+Não podem conter espaços
+Não podem ser palavras reservadas
+
+
+
+dicas
+
+Maíusculas e minúsculas fazem diferença
+Tente escolher nome coerentes para as variaveis
+evite se tornar um 'programador alfabeto' 
+ou um 'programador contador'
+
+
+
+Data Types
+
+number = Infinity / NaN   == Number(n)
+string			  == String(n)
+boolean
+null
+undefined
+object = Array
+function
+
+
+
+template string   =   ${}
+
+
+
+Formatando Strings
+
+s.length = quantos caractestes a string tem
+s.toUpperCase() = tudo maiúsculo
+s.toLowerCase() = tudo minúsculo
+
+
+
+Formatando Number
+
+n.toFixed() = 
+  para adicionar casas decimais
+n.toFixed().replace("." , ",") = 
+  para trocar ponto por virgula
+n.toLocaleString("pt-BR",{style: 'currency', currency: "BRL"}) =
+ para ficar em Real ou a moeda que desejar
+
+
+
+Operadores
+
+aritméticos = 5 + 2 = 7 \\ 5 - 2 = 3 \\ 5 * 2 = 10
+ 	     5 / 2 = 2,5 \\ 5 % 2 = 1 \\ 5 ** 2 = 25
+atribuição = += -= *= /= **= %= / ++ --
+relacionais =  >  <  >=  <=  ==  != /// true or false
+ / identidade = 5 = 5 true / 5 == "5" true / 5 === "5" false
+lógicos = ! negação / && conjução = e / || disjunção = ou // true false
+ternários = ? : // teste ? true : false
+var idade = 19/ var r = idade >= 18 ? 'maior' : 'menor'
+
+precedência = () > ** > * / % > + - 
+	      >  <  >=  <=  ==  != 
+		!   >	&&   >	||
+
+
+
+DOM = Document Object Model
+Árvore DOM
+	  window
+location document history
+	   html
+        head  body
+ meta title   h1  p  p  div
+                  strong  
+
+
+
+Selecionando
+
+por marca = getElementsByTagName()
+por  ID  = getElementByID()
+por nome = getElementByName()
+por classe = getElementsByClassName()
+por seletor = querySelector()   = por tags do CSS
+	    = querySelectorAll()    . ou #
+
+
+
+Eventos DOM
+
+mouseenter = quando o cursor entra no elemento
+mousemove = quando o cursor se move
+mousedown = quando clica e segura
+mouseup = quando solta o clique depois de segurar
+click = quando clica normal
+mouseout = quando sai do elemento
+
+ex = <div id="area" onclick="clicar()">
+ou
+area1.addEventListener('click',clicar)
+
+
+
+Funções
+
+function ação(param){   
+x.innerText = 'apenas linhas de texto'
+x.innerHTML = 'texto e elementos html'
+
+}
+
+
+
+
+
+var n1 = Number(document.getElementById("txtn1").value);
+
+para transformar o conteúdo do input em numero
+
+
+
+var nasc = String(document.getElementById("país").value)
+
+para transformar o conteúdo do input em string
+
+
+
+pegar a hora do computador
+
+var agora = new Date()
+var hora = agora.getHours();
+
+
+
+
+Condições
+
+Condição simples = if(){}
+Condição composta = if(){} else{}
+Condição aninhada = if(){} else if(){} else{}
+Condição múltipla =
+		switch(){
+		case 0:
+		break
+		case 1:
+		break
+		default:}
+
+
+
+
+Repetições
+
+while(){}
+do {} while () 
+for(inicio;teste;incremento){}
+
+
+
+
+
+VARIAVEIS	
+
+variaveis simples - só conseguem armazenar um valor por vez
+
+variaveis compostas - devem ser capazes de armazenar vários
+valores em uma mesma estrutura
+
+resumo das variaveis compostas
+
+
+			        elemento  
+       array/vetor --> a            v
+		       [   ,   ,  <-]-- conteúdo/valor
+       indice/ chave/key 0   1   2
+
+
+
+
+var num = [5, 8, 4]
+num[3] = 6
+num = [5,8,4,6]
+num.push(7) <== acrescenta um número no final
+num = [5,8,4,6,7]
+num.length <== saber quantos elementos tem
+num.sort() <== coloca em ordem crescente
+num = [4,5,6,7,8]
+console.log(num[0])
+num.indexOf(7)  <== procurar valor dentro do vetor
+se não encontrar, retorna -1
+var pos = num.indexOf(3)
+if (pos == -1) { console.log("O valor não foi encontrado") }
+else { console.log(`O valor 3 está na posição ${pos}`) }
+
+
+var num = [4, 5, 6, 7, 8]
+posição = 0
+while (posição < num.length) {
+    console.log(num[posição])
+    posição += 1
+}
+
+
+
+
+
+var num = [4, 5, 6, 7, 8]
+for(var posição in num )
+{console.log(`A posição ${posição} tem o valor ${num[posição]}`)
+}
+
+
+
+
+
+
+Funções
+
+São acções executadas assim que são chamadas ou em decorrencia de algum evento.
+
+Uma função pode receber parametros e retornar um resultado.
+
+
+
+
+
+  num.value = ''
+  num.focus()    para apagar o input

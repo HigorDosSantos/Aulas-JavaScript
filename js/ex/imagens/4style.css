@@ -1,0 +1,59 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(153, 0, 255),
+    rgb(255, 44, 220)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 5rem 0 1rem;
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.671);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 3px 3px 3px black;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.container input {
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.473);
+  padding: 0.3rem;
+  width:100px;
+}
+.container #resposta {
+  text-align: center;
+  color: linear-gradient(to bottom, rgb(153, 0, 255), rgb(255, 44, 220));
+}
+
+#limpar{
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: rgba(153, 0, 255, 0);
+  border:1px solid rgba(0, 0, 0, 0.37);
+}
+footer {
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+  margin-top: 1rem;
+  color: white;
+}

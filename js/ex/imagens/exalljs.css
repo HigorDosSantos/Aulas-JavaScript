@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(153, 0, 255),
+    rgb(255, 44, 220)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 3px 3px 3px black;
+}
+h2 {
+  text-align: center;
+  margin: 3rem 0 1rem;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 3px 3px 3px black;
+}
+/*  HORA DO DIA  */
+
+.horadodia {
+  background-color: #fff;
+  width: 350px;
+  margin: auto;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+.horadodia p {
+  margin-top: 1rem;
+}
+
+.horadodia #imagem {
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+/*  Verificador de idade  */
+
+.verificador {
+  background-color: #fff;
+  width: 350px;
+  margin: 0 auto 3rem;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.verificador #nascimento {
+  border: solid 1px rgba(0, 0, 0, 0.247);
+  border-radius: 5px;
+  padding: 0.3rem;
+  width: 50px;
+  margin: 1rem 0.2rem;
+}
+.verificador input {
+  margin: 1rem 0;
+}
+.verificador #verificar {
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: solid 1px rgba(0, 0, 0, 0.247);
+}
+.verificador img {
+  border: 1px solid rgba(204, 0, 255, 0.397);
+  border-radius: 100%;
+  margin: 1rem 0;
+}
+
+/*  contador   */
+
+.contador {
+  background-color: #fff;
+  width: 350px;
+  margin: 0 auto 3rem;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.contador input {
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: solid 1px rgba(0, 0, 0, 0.247);
+  margin: 0.3rem;
+  width: 50px;
+}
+
+/*  tabuada   */
+.tabuada {
+  background-color: #fff;
+  width: 350px;
+  margin: 0 auto 3rem;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.tabuada input {
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: solid 1px rgba(0, 0, 0, 0.247);
+  margin: 0.3rem;
+  width: 50px;
+}
+
+/*  analizador   */
+
+
+.analizador {
+  background-color: #fff;
+  width: 350px;
+  margin: 0 auto 3rem;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+.analizador input {
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: solid 1px rgba(0, 0, 0, 0.247);
+  margin: 0.3rem;
+  width: 65px;
+}
+
+.analizador select{
+width: 150px;
+border-radius: 5px;
+border: solid 1px rgba(0, 0, 0, 0.247);
+display: block;
+margin:auto;
+overflow: auto;
+
+}

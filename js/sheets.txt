@@ -1,0 +1,448 @@
+
+window.prompt
+window.alert
+
+Number(window.prompt("Digite um numero: "));
+string(window.prompt("Digite seu nome: "));
+"var x =" == "x recebe "
+
+Number(document.getElementById("inicio").value)
+	 para abreviar para numero
+
+
+.value no final da porra toda
+
+document.write - para escrever na tela   resp.innerHTML
+
+window.alert(`A soma de ${x1} e ${x2} é ${x3}`);  placeholder
+
+
+Formatando string;
+nome.length()  - tamanho
+nome.toLowerCase()
+nome.toUpperCase()
+
+DOM = Document Object Model
+Árvore DOM
+	  window
+location document history
+	   html
+        head  body
+ meta title   h1  p  p  div
+                  strong  
+ 
+
+Selecionando:
+por marca   - getElementsByTagName() - Seleciona pela Tag
+por ID	    - getElementById() - getElementById() - Seleciona o elemeto pelo ID
+por nome    - getElementsByName() - Seleciona o objeto pelo Nome
+por classe  - getElementsByClassName() - Seleciona o elemento por Classe
+por seletor - querySelecto() - Seleciona o Objeto por Seletor
+	    - querySelectorAll() - Seleciona o Objeto por Seletores 
+		    . pra classe, # pra id
+
+
+var p1 = window.document.getElementsByTagName("p")[1];
+var d = window.document.getElementById("msg");
+var d = window.document.getElementsByName('msg')[0];
+var d = window.document.getElementsByClassName('msg')[0];
+var d = window.document.querySelector('div#msg');
+d.innerText = "teste";
+d.style.background = "gray";
+
+Identificadores;
+podem começar com letra, $ ou _
+não podem começar com números
+é possivel usar letras ou números
+é possivel usar acentos ou símbolos
+não podem conter espaços
+não podem ser palavras reservadas
+
+typeof; para identificar o elemento
+number: infinity / NaN
+string
+boolean
+null
+undefined
+object: array /
+function
+
+Operadores;
+aritméticos + - * / % ** 
+atribuição
+relacionais < > <= >= == !=
+logicos !(negação) && (conjunção / e) || (disjunção / ou)
+ternário ? :  ex:(media = 5 // media > 7?"aprovado":"reprovado")
+
+= recebe
+== igual seja number ou string
+=== exatamente igual
+
+
+precedência:
+() ** / * + -
+> < >=
+!
+&&
+||
+
+Eventos DOM;
+
+<div id="area">Interaja...</div>
+
+
+funções
+são ações executadas assim que são chamadas
+ou em decorrência de algum evento 
+pode receber parâmentros e retornar um resultado
+
+function ação(parametro){}
+
+
+
+
+sequencias
+var n = 3
+n += 2
+window.alert(n)
+
+condições
+if(condição){
+
+} 
+
+else if (condição){
+}
+
+else {
+
+}
+
+
+
+switch (expressão){
+case valor 1:
+
+break
+case valor 2:
+
+break
+case valor 3:
+
+break
+default:
+
+break
+}
+
+
+    while é a mesma coisa que no python
+
+		while(condição){}
+
+
+c = 0
+while (c < 10 ){
+c += 1
+console.log(c)
+}
+console.log('fim')
+
+
+
+	esse aqui é doideira
+for( ; ; ) { }
+
+c = 0
+for(c = 1 ; c <= 10 ; c += 1)
+{console.log(c)}
+console.log('Acabou')
+
+
+		VARIAVEIS	
+
+variaveis simples - só conseguem armazenar um valor por vez
+
+variaveis compostas - devem ser capazes de armazenar vários
+valores em uma mesma estrutura
+
+resumo das variaveis compostas
+
+
+			        elemento  
+       array/vetor --> a            v
+		       [   ,   ,  <-]-- conteúdo/ valor
+       indice/ chave/key 0   1   2
+		
+ex:
+num = [ 5, 8, 4]
+	0  1  2
+
+num = [ 5, 8, 4]
+console.log(`Nosso vetor é o ${num}`)
+"nosso vetor é o 5, 8, 4"
+
+
+para adicionar um numero:
+
+num[3] = 6   // o js cria o elemento 3
+num = [ 5, 8, 4, 3]
+
+num.push(7) // adiciona o numero 7 na ultima posição
+num = [ 5, 8, 4, 3, 7]
+
+num.length // para saber quantos elementos tem no array
+
+num.sort() // coloca os elementos em ordem crescente
+
+
+
+num = [ 5, 8, 2, 9, 3]
+num.push(7)
+console.log(`Nosso vetor tem ${num.length}
+ elementos, e são eles: ${num.sort()}`)
+
+"Nosso vetor tem 6 elementos, e são eles: 2,3,5,7,8,9"
+
+
+
+num = [1,9,6,2,3,5]
+num.sort()
+for(pos = 0; pos < num.length; pos += 1){
+    console.log(`na posição ${pos} temos o elemento ${num[pos]}`)
+
+}
+
+for(pos in num){   // tão facil que é suspeito
+console.log(`Na posição ${pos} temos o valor ${num[pos]}`)
+}
+
+
+num.indexOf(7) == mostra a posição do numero dentro do array
+se tiver ele retorna a posição, se não tiver, retorna -1
+
+
+
+
+
+
+
+
+<script>
+      n1 = Number(window.prompt("Digite um numero: "));
+      n2 = Number(window.prompt("Digite outro numero: "));
+      n3 = n1 + n2;
+      window.alert(`A soma de ${n1} e ${n2} é ${n3}`);
+    </script>
+
+
+
+
+
+<script>
+      n1 = Number(window.prompt("Digite um numero: "));
+      n2 = Number(window.prompt("Digite outro numero: "));
+      soma = n1 + n2;
+      sub = n1 - n2;
+      mult = n1 * n2;
+      div = n1 / n2;
+      rest = n1 % n2;
+      quad = n1 ** n2;
+      document.write(
+        `A soma de ${n1} e ${n2} é ${soma}<br>
+        A subtração de ${n1} e ${n2} é ${sub}<br>
+        A mutiplicação de ${n1} e ${n2} é ${mult}<br>
+        A divisão de ${n1} e ${n2} é ${div}<br>
+        O resto de divisão de ${n1} e ${n2} é ${rest}<br>
+        O quadrado de ${n1} e ${n2} é ${quad}`
+      );
+    </script>
+
+
+
+
+
+<script>
+      var nome = window.prompt("Qual o seu nome?");
+
+      document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras`);
+      document.write(`Seu nome em maiúsculas é <strong>${nome.toUpperCase()}</strong>`)
+</script>
+
+
+
+
+
+
+    <script>
+      var a = window.document.getElementById("area");
+      a.addEventListener("click", clicar);
+      a.addEventListener("mouseenter", entrar);
+      a.addEventListener("mouseout", sair);
+
+      function clicar() {
+        a.innerText = "Clicou!";
+        a.style.background = "red";
+      }
+      function entrar() {
+        a.innerText = "Entrou";
+      }
+      function sair() {
+        a.innerText = "Saiu!";
+        a.style.background = "green";
+      }
+    </script>
+
+
+
+
+
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1" /> +
+    <input type="number" name="txtn2" id="txtn2" />
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    
+
+
+
+    <script>
+      function somar(){
+          var tn1 = window.document.getElementById("txtn1");
+          var tn2 = window.document.getElementById("txtn2");
+          var res = window.document.getElementById("res");
+          var n1 = Number(tn1.value)
+          var n2 = Number(tn2.value)
+          var s = n1 + n2
+          res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+
+
+
+
+
+
+function verificar() {
+    data = new Date()
+    ano = data.getFullYear()
+    fano = document.getElementById('number')
+    res = document.getElementById('resp')
+
+    if (fano.value.length == 0 || fano.value > ano) {
+        alert('[ERRO] Verifique os dados e tente novamente')
+    } else {
+        fsexo = document.getElementsByName('Sexo')
+        idade = ano - Number(fano.value)
+        genero = ''
+        img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+
+        if (fsexo[0].checked) {
+            genero = 'Homem'
+            if (idade >= 0 && idade <= 15) {
+                //criança
+                img.setAttribute('src', 'foto-M0a15.png')
+            }
+            else if (idade > 15 && idade < 50) { //adulto homem
+                img.setAttribute('src', 'foto-M15a50.png')
+            }
+            else { //homem idoso homem
+                img.setAttribute('src', 'foto-M50+.png')
+            }
+        }         
+        else if (fsexo[1].checked) {
+            genero = 'Mulher'
+            if (idade >= 0 && idade <= 15) {// criança mulher
+                img.setAttribute('src', 'foto-F0a15.png')
+             }
+            else if (idade > 15 && idade >= 49) { //adulto mulher 
+                img.setAttribute('src', 'foto-F15a50.png')
+            }
+            else { //idoso mulher
+                img.setAttribute('src', 'foto-F50+.png')
+             }
+        }
+        res.innerHTML= `Detectamos ${genero} com ${idade} anos`
+        res.appendChild(img)
+    }
+
+}
+
+
+
+
+
+function carregar() {
+    hr = document.getElementById('horas')
+    fotinha = document.getElementById('foto')
+    data = new Date()
+    hora = data.getHours()
+    hr.innerHTML = `Agora são ${hora} horas`
+    if (hora > 0 && hora < 12) {
+        hr.innerHTML += ', bom dia'
+        fotinha.innerHTML = '<img src = "imagens/foto-dia.png">'
+        document.body.style.background = "#3aa4b36e"
+    }
+    else if (hora >= 12 && hora < 18) {
+        hr.innerHTML += ', boa tarde'
+        fotinha.innerHTML = '<img src = "imagens/foto-tarde.png">'
+        document.body.style.background = "#eed7556e"
+    }
+    else {
+        hr.innerHTML += ', boa noite'
+        fotinha.innerHTML = '<img src = "imagens/foto-noite.png">'
+        document.body.style.background = "#140042"
+    }
+
+}
+
+
+
+
+
+
+function contar() {
+     i = Number(document.getElementById("inicio").value)
+     f = Number(document.getElementById("fim").value)
+     p = Number(document.getElementById("passo").value)
+     resp = document.getElementById("res")
+    if (p <= 0) {
+        alert("Passo inválido, considerando passo 1")
+        p = 1
+    }
+    if (i < f) {  // crescente
+         while (i <= f) {
+        i += p
+        resp.innerHTML += `${i - p} 👉 `
+    }}
+     else {
+        while (i >= f){  // descrecente
+            i -= p
+            resp.innerHTML += `${i + p} 👉 `
+        }
+    }
+    resp.innerHTML += ` 🏁`
+}
+
+
+
+
+
+
+
+
+function calcular(){
+
+numero = document.getElementById("numero");
+num = Number(numero.value);
+c = 0
+result = 0
+res=document.getElementById("resp");
+res.innerHTML = ` `
+while (c != 10){
+c += 1
+result = num * c
+res.innerHTML+=`${num} x ${c} = ${result}<br>`
+}
+}
+(iniciar + ç para emojis)
